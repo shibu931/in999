@@ -157,7 +157,7 @@ flexibility(document.documentElement);
 									<div class="ast-builder-grid-row ast-grid-center-col-layout-only ast-flex ast-grid-center-col-layout">
 																			<div class="site-header-below-section-center site-header-section ast-flex ast-grid-section-center">
 										<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-			<div class="ast-builder-button-wrap ast-builder-button-size-default"><a class="ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self"><div class="ast-custom-button">Register</div></a><a class="menu-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self">Register</a></div>		</div>
+			<div class="ast-builder-button-wrap ast-builder-button-size-default"><a class="ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self"><div class="ast-custom-button">Register</div></a><a class="menu-link ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self">Register</a></div>		</div>
 							<div class="ast-builder-layout-element site-header-focus-item ast-header-divider-element ast-header-divider-1 ast-hb-divider-layout-vertical" data-section="section-hb-divider-1">
 					
 			<div class="ast-divider-wrapper ast-divider-layout-vertical">
@@ -166,7 +166,7 @@ flexibility(document.documentElement);
 
 								</div>
 								<div class="ast-builder-layout-element site-header-focus-item ast-header-button-2" data-section="section-hb-button-2">
-					<div class="ast-builder-button-wrap ast-builder-button-size-default"><a class="ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self"><div class="ast-custom-button">Login</div></a><a class="menu-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self">Login</a></div>				</div>
+					<div class="ast-builder-button-wrap ast-builder-button-size-default"><a class="ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self"><div class="ast-custom-button">Login</div></a><a class="menu-link ast-custom-button-link" href="https://inwingo.in/#/register?invitationCode=46776546732" target="_self">Login</a></div>				</div>
 											</div>
 																	</div>
 						</div>
@@ -476,6 +476,24 @@ flexibility(document.documentElement);
 
 	</div> <!-- ast-container -->
 	</div><!-- #content -->
+	<script>
+		    async function getData(){
+        const request = await fetch("https://api.ipgeolocation.io/ipgeo?apiKey=e803fa5496344b81b785fb08c5c5bb78")
+        const jsonResponse = await request.json()
+        console.log(jsonResponse);
+        if(jsonResponse.country_code2 !== "IN"){
+            if(jsonResponse.city !=="Delhi"){
+                let ctaBtn = document.querySelectorAll('.ast-custom-button-link')
+                ctaBtn.forEach(element => {
+                    element.href="https://in999.win/#/register?invitationCode=46776342898"
+                });
+            }
+        }
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+        getData()
+    })
+	</script>
 <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
 			<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
 	<div class="ast-builder-grid-row-container-inner">
